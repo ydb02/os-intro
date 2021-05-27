@@ -1,0 +1,16 @@
+#!/bin/bash
+while getopts i:o:p:Cn optletter
+do case $optletter in
+       i)iflag=1; ival=$OPTARG;;
+       o)oflag=1; oval=$OPTARG;;
+       p)pflag=1; pval=$OPTARG;;
+       c)cflag=1;;
+       n)nflag=1;;
+       *)nflag=1;;
+   esac
+done
+echo "iflag = $iflag ival = $ival"
+echo "oflag = $oflag ival = $oval"
+echo "pflag = $pflag ival = $pval"
+echo "Cflag = $Cflag"
+echo "nflag = $nflag"
